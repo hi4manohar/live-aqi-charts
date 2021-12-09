@@ -48,5 +48,14 @@ export default function AqiChart(props) {
     ]
   };
 
-  return <Bar options={options} data={data} />;
+  return (
+    <div class="chart-container" style={{
+      position: "relative",
+      width: "100%",
+      maxWidth: "900px",
+      margin: "0 auto"
+    }}>
+      <Bar options={options} data={data} responsive={true} />
+    </div>
+  );
 }
